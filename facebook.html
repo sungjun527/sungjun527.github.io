@@ -15,11 +15,23 @@
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
+     js.src = "//connect.facebook.net/en_KR/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
+FB.ui({
+  method: 'feed',
+  link: 'https://developers.facebook.com/docs/',
+  caption: 'An example caption',
+}, function(response){});
+
+FB.ui({
+  method: 'share',
+  href: 'https://developers.facebook.com/docs/',
+}, function(response){});
 </script>
 
+<div id="fb-root"></div>
 
 <div
   class="fb-like"
@@ -28,5 +40,16 @@
   data-show-faces="true">
 </div>
 
+<br/>11<br/><br/>11
+<div class="fb-share-button" 
+data-href="http://localhost/J1Project/product/productMainList" 
+data-layout="button">11</div>
+
 helloworld
+
+<a href='https://www.facebook.com/dialog/share?
+  app_id=145634995501895
+  &display=popup
+  &href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F
+  &redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer'>link</a>
 </body></html> 
